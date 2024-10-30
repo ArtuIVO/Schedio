@@ -1,0 +1,12 @@
+<!-- GoogleLogin.razor -->
+@page "/login"
+<button @onclick="IniciarSesionConGoogle">Iniciar sesión con Google</button>
+
+@code {
+    [Inject] NavigationManager NavigationManager { get; set; }
+
+    private void IniciarSesionConGoogle()
+    {
+        NavigationManager.NavigateTo("https://tuservidor.com/api/auth/google-login", true);
+    }
+}
